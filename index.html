@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Cámara</title>
+  <link rel="manifest" href="/practicacamara/manifest.json">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="/practicacamara/193.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    video, canvas {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Práctica Cámara</h1>
+
+  <video id="camera" autoplay playsinline></video>
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <div>
+    <button id="capture">Tomar foto</button>
+    <button id="switch">Cambiar cámara</button>
+  </div>
+
+  <h3>Mini galería</h3>
+  <div id="gallery" class="gallery"></div>
+
+  <script src="/practicacamara/app.js"></script>
+</body>
+</html>

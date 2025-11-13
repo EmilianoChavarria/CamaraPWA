@@ -48,7 +48,7 @@ window.addEventListener('load', async () => {
 
   if ('serviceWorker' in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register('/practicacamara/sw.js');
+      const registration = await navigator.serviceWorker.register('/sw.js');
       console.log('Service Worker registrado:', registration);
     } catch (error) {
       console.error('Error registrando Service Worker:', error);
